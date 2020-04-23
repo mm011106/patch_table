@@ -5,7 +5,7 @@ use IEEE.numeric_std.all;
 entity OUTPUT_PATCH is
 	port
 	(
-		ADDR	: in natural range 0 to 50;
+		ADDR		: in natural range 0 to 50;
 		CLK		: in std_logic;
 		Q			: out std_logic_vector(7 downto 0)
 	);
@@ -20,7 +20,7 @@ architecture RTL of OUTPUT_PATCH is
 
 	signal ROM:MEMORY_T;
 	attribute ram_init_file:string;
-	attribute ram_init_file of ROM: signal is "patch_table.mif";
+	attribute ram_init_file of ROM: signal is "C:\Users\miyam\OneDrive\Documents\HDL\ROM\patch_table.mif";
 	-- ram_init_fileはファイルを指定するための特別なアトリビュート名
 
 begin

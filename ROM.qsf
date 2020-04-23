@@ -59,5 +59,8 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "NO HEAT SINK WITH STILL AIR"
+set_global_assignment -name VHDL_FILE ROM_tb.vhdl
 set_global_assignment -name MIF_FILE patch_table.mif
 set_global_assignment -name VHDL_FILE ROM.vhd
+set_global_assignment -name MIF_FILE ROM.mif
+set_global_assignment -name HEX_FILE patch_table.hex
