@@ -62,5 +62,5 @@ set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "NO HEAT SINK WITH STI
 set_global_assignment -name VHDL_FILE ROM_tb.vhdl
 set_global_assignment -name MIF_FILE patch_table.mif
 set_global_assignment -name VHDL_FILE ROM.vhd
-set_global_assignment -name MIF_FILE ROM.mif
-set_global_assignment -name HEX_FILE patch_table.hex
+set_global_assignment -name MIF_FILE ../../../?f?X?N?g?b?v/xx.mif
+set_global_assignment -name MIF_FILE ../xx.mif

@@ -35,7 +35,7 @@ signal SIM_END 		: boolean := false;
 constant PERIOD_A : time := 50 ns;
 
 -- total period of this simulation
-constant PERIOD_B : time := 4 us;
+constant PERIOD_B : time := 6 us;
 
 begin
 	DUT:OUTPUT_PATCH
