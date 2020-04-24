@@ -22,7 +22,7 @@ architecture RTL of OUTPUT_PATCH is
 
 	signal ROM:MEMORY_T;
 	attribute ram_init_file:string;
-	attribute ram_init_file of ROM: signal is "C:\Users\miyam\OneDrive\Documents\HDL\ROM\patch_table.mif";
+	attribute ram_init_file of ROM: signal is "patch_table.mif";
 	-- ram_init_fileはファイルを指定するための特別なアトリビュート名
 
 begin
