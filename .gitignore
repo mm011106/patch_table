@@ -43,3 +43,8 @@
 !*.svg
 !*.png
 !*.pdf
+
+# scripts
+!*.do
+!*.tcl
+

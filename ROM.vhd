@@ -1,3 +1,5 @@
+--mem load -i C:/Users/miyam/OneDrive/Documents/HDL/ROM/simulation/modelsim/exported.mem -format hex -startaddress 50 -endaddress 0 -update_properties /sim/DUT/ROM
+
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
