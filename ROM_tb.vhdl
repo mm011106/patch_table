@@ -11,18 +11,18 @@ component OUTPUT_PATCH
 	port(
 		-- inputs
 		CLK	: in std_logic;
-		ADDR :	in natural range 0 to 50;
+		ADDR :	in std_logic_vector(5 downto 0);
 
 		--	DDS control
-		Q			: out std_logic_vector(7 downto 0)
+		Q			: out std_logic_vector(5 downto 0)
 
 	);
 end component;
 
 signal tb_CLK   	: std_logic:='0';
-signal tb_ADD  	: natural range 0 to 50;
+signal tb_ADD  	: natural range 0 to 63;
 
-signal tb_Q	: std_logic_vector(7 downto 0);
+signal tb_Q	: std_logic_vector(5 downto 0);
 
 
 signal ADD_COUNTER:	std_logic_vector(5 downto 0):=(others =>'0');
@@ -63,7 +63,7 @@ begin
 		end loop;
 
 	end process;
-	
+
 	process(tb_CLK)
 	begin
 		if (tb_CLK'event and tb_CLK = '0') then
