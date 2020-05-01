@@ -11,7 +11,7 @@ component OUTPUT_PATCH
 	port(
 		-- inputs
 		CLK	: in std_logic;
-		ADDR :	in integer range 0 to 2**6-1;
+		ADDR :	in std_logic_vector(5 downto 0);
 		--	DDS control
 		Q			: out std_logic_vector(5 downto 0)
 
@@ -19,7 +19,7 @@ component OUTPUT_PATCH
 end component;
 
 signal tb_CLK   	: std_logic:='0';
-signal tb_ADD  	: integer range 0 to 2**6-1;
+signal tb_ADD  	: std_logic_vector(5 downto 0);
 
 signal tb_Q	: std_logic_vector(5 downto 0);
 
@@ -72,7 +72,8 @@ begin
 		end if;
 	end process;
 
-	tb_ADD <= to_integer(unsigned(ADD_COUNTER));
+	tb_ADD <= ADD_COUNTER;
+
 
 -- Controlling the total simulation period of time
 	process

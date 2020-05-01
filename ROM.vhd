@@ -2,9 +2,8 @@
 
 library IEEE;
 use IEEE.std_logic_1164.all;
-use IEEE.std_logic_unsigned.all;
 use IEEE.numeric_std.all;
-use IEEE.std_logic_arith.all;
+
 
 entity OUTPUT_PATCH is
 
@@ -14,8 +13,8 @@ entity OUTPUT_PATCH is
 	);
 
 	port (
-		ADDR	: in 	integer range 0 to 2**INPUT_CASE_WIDTH-1;
-		CLK		: in 	std_logic;
+		ADDR	: in 	std_logic_vector(INPUT_CASE_WIDTH-1 downto 0);
+			CLK		: in 	std_logic;
 		Q			: out std_logic_vector(OUTPUT_WIDTH-1 downto 0)
 	);
 
@@ -35,6 +34,6 @@ architecture RTL of OUTPUT_PATCH is
 
 begin
 
-	Q <= ROM(ADDR);
+	Q <= ROM(to_integer(unsigned(ADDR)));
 
 end RTL;
