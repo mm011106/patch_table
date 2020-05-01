@@ -1,4 +1,4 @@
---mem load -i C:/Users/miyam/OneDrive/Documents/HDL/ROM/simulation/modelsim/exported.mem -format hex -startaddress 50 -endaddress 0 -update_properties /sim/DUT/ROM
+--mem load -i C:/Users/miyam/OneDrive/Documents/HDL/ROM/simulation/modelsim/patch_table.mem -format hex -startaddress 50 -endaddress 0 -update_properties /sim/DUT/ROM
 
 library IEEE;
 use IEEE.std_logic_1164.all;
@@ -14,7 +14,7 @@ entity OUTPUT_PATCH is
 
 	port (
 		ADDR	: in 	std_logic_vector(INPUT_CASE_WIDTH-1 downto 0);
-			CLK		: in 	std_logic;
+		CLK		: in 	std_logic;
 		Q			: out std_logic_vector(OUTPUT_WIDTH-1 downto 0)
 	);
 
