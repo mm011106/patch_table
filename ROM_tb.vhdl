@@ -1,6 +1,6 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
-use IEEE.std_logic_unsigned.all;
+--use IEEE.std_logic_unsigned.all;
 use IEEE.numeric_std.all;
 
 entity sim is
@@ -24,8 +24,8 @@ signal tb_ADD  	: std_logic_vector(5 downto 0);
 signal tb_Q	: std_logic_vector(5 downto 0);
 
 
-signal ADD_COUNTER:	std_logic_vector(5 downto 0):=(others =>'0');
-
+--signal ADD_COUNTER:	std_logic_vector(5 downto 0):=(others =>'0');
+signal ADD_COUNTER: integer range 0 to 63;
 
 -- signal for initiating end of simulation.
 signal SIM_END 		: boolean := false;
@@ -66,13 +66,13 @@ begin
 	process(tb_CLK)
 	begin
 		if (tb_CLK'event and tb_CLK = '0') then
-			ADD_COUNTER <= ADD_COUNTER+1;
+			ADD_COUNTER <= ADD_COUNTER + 1;
 		else
 			ADD_COUNTER <= ADD_COUNTER;
 		end if;
 	end process;
 
-	tb_ADD <= ADD_COUNTER;
+	tb_ADD <= std_logic_vector(to_unsigned(ADD_COUNTER, tb_ADD'length));
 
 
 -- Controlling the total simulation period of time
